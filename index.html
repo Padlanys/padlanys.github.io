@@ -94,6 +94,22 @@
             margin-bottom: 1rem;
             border-radius: 5px;
         }
+        form textarea, form input {
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background: var(--card);
+            color: var(--text);
+        }
+        form button {
+            padding: 0.7rem 1.5rem;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
         footer {
             text-align: center;
             padding: 1rem;
@@ -108,7 +124,7 @@
     <div class="toggle" onclick="toggleMode()">🌓 Mode</div>
     <h1>PADLAN YUSUF SAEPI</h1>
     <p>Pemilik CV. Griya VhiChi Mandiri</p>
-    <img src="https://via.placeholder.com/120" alt="Foto Profil" class="profile-pic">
+    <img src="logo_profil.jpg" alt="Foto Profil" class="profile-pic">
 </header>
 
 <nav>
@@ -147,19 +163,31 @@
             <p>Aplikasi manajemen desa terpadu: warga, BPD, surat, dll.</p>
             <a href="#">Belum tersedia</a>
         </div>
+        <div class="portfolio-item">
+            <h3>Kartu RT/RW Generator</h3>
+            <p>Fitur cetak kartu warga berbasis PDF + QR Code langsung dari SIMDes</p>
+            <a href="https://github.com/padlanys/SIMDes-RT-RW">Lihat Proyek</a>
+        </div>
     </div>
 
     <div class="blog-section">
         <h2>Berita / Blog Desa</h2>
         <div class="blog-post">
-            <h3>Pelatihan Digitalisasi Desa</h3>
-            <p>Desa kita mulai menerapkan sistem digital untuk keuangan dan data warga. Pelatihan telah dilaksanakan bersama CV. Griya VhiChi Mandiri.</p>
+            <h3>Pemanfaatan AIOS25 di 10 Desa</h3>
+            <p>Sukses diterapkan untuk input otomatis keuangan desa. Menghemat waktu, meningkatkan akurasi laporan, dan membuat operator desa senyum terus.</p>
         </div>
         <div class="blog-post">
-            <h3>Pembangunan Infrastruktur</h3>
-            <p>Proyek jembatan penghubung antar dusun dimulai minggu ini. Data perencanaan tersedia dalam aplikasi SIMDes OneApp.</p>
+            <h3>Rilis SIMDes OneApp Versi Premium</h3>
+            <p>Modul warga, kelembagaan, BPD, surat menyurat otomatis, QR code, dan cetak kartu sudah terintegrasi dalam versi premium. Siap digunakan 2025!</p>
         </div>
     </div>
+
+    <h2>Komentar</h2>
+    <form action="mailto:padlanyusufsaepi@gmail.com" method="POST" enctype="text/plain">
+        <input type="text" name="nama" placeholder="Nama Anda" required>
+        <textarea name="pesan" rows="4" placeholder="Komentar..." required></textarea>
+        <button type="submit">Kirim</button>
+    </form>
 </section>
 
 <footer>
