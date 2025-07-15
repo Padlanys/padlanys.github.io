@@ -51,12 +51,13 @@
             margin: auto;
         }
         .profile-pic {
+            margin-top: 20px;
             width: 120px;
             height: 120px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid white;
-            margin-top: -60px;
+            margin-top: 20px;
             box-shadow: 0 0 5px rgba(0,0,0,0.2);
         }
         .socials a {
@@ -117,14 +118,45 @@
             color: #888;
         }
     </style>
+
+    <style>
+    .splash {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #2c3e50;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        font-size: 2rem;
+        font-weight: bold;
+        animation: fadeOut 2s ease-in-out 2s forwards;
+    }
+    .fade-in {
+        animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeOut {
+        to { opacity: 0; visibility: hidden; }
+    }
+    </style>
 </head>
+
+
 <body>
+<div class="splash">CV. Griya VhiChi Mandiri</div>
+
 
 <header>
     <div class="toggle" onclick="toggleMode()">🌓 Mode</div>
     <h1>PADLAN YUSUF SAEPI</h1>
     <p>Pemilik CV. Griya VhiChi Mandiri</p>
-    <img src="logo_profil.jpg" alt="Foto Profil" class="profile-pic">
+    <img src="logo_profil.jpg" class="profile-pic fade-in" alt="Foto Profil" class="profile-pic">
 </header>
 
 <nav>
