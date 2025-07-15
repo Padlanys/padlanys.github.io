@@ -1,15 +1,86 @@
+from pathlib import Path
+
+# HTML template with user's data
+html_content = """
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Portofolio Padlan Yusuf Saepi</title>
-  <style>
-    body { font-family: sans-serif; background: #f0f0f0; text-align: center; padding: 50px; }
-    h1 { color: #2c3e50; }
-  </style>
+    <meta charset="UTF-8">
+    <title>PADLAN YUSUF SAEPI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        section {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+        }
+        .socials a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        .portfolio {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-  <h1>Hai, Saya Padlan Yusuf Saepi</h1>
-  <p>Ini adalah situs pribadi saya. Lihat portofolio dan karya-karya saya di sini.</p>
+
+<header>
+    <h1>PADLAN YUSUF SAEPI</h1>
+    <p>Pemilik CV. Griya VhiChi Mandiri</p>
+</header>
+
+<section>
+    <h2>Tentang Saya</h2>
+    <p>Developer Python, Developer AIOS25, Design Sketchup, Mahir SisKeuDes.<br>
+    Membuat aplikasi dan konten edukatif, Kreatif, Inovatif, Satir, Absurd, dan Lain lain sebagainya.</p>
+
+    <div class="socials">
+        <a href="https://instagram.com/vh10ch10" target="_blank">Instagram</a>
+        <a href="https://wa.me/62811404676" target="_blank">WhatsApp</a>
+        <a href="https://github.com/padlanys" target="_blank">GitHub</a>
+        <a href="https://youtube.com/@padlanyusufsaepi856" target="_blank">YouTube</a>
+    </div>
+
+    <h2>Portofolio</h2>
+    <div class="portfolio">
+        <p>Belum ada proyek ditampilkan. Silakan tambahkan link proyek, gambar, atau deskripsi karya di bagian ini nanti.</p>
+    </div>
+</section>
+
+<footer>
+    &copy; 2025 PADLAN YUSUF SAEPI — Dibuat dengan semangat satir dan absurditas
+</footer>
+
 </body>
 </html>
+"""
+
+# Simpan ke file
+output_path = Path("/mnt/data/index_padlanys.html")
+output_path.write_text(html_content, encoding='utf-8')
+
+output_path.name
